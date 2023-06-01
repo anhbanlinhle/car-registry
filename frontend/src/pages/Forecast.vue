@@ -123,26 +123,6 @@ onMounted(() => {
     fetchForecastList()
 });
 
-// watch(() => pageNumber.value, () => {
-//     fetchForecastList()
-// });
-
-// watch([resPerPage, pageNumber], () => {
-//     if(resPerPage.value === 5) {
-//         minHeight.value = 'min-h-[300px]'
-//     }
-//     if(resPerPage.value === 7) {
-//         minHeight.value = 'min-h-[400px]'
-//     }
-//     if(resPerPage.value === 10) {
-//         minHeight.value = 'min-h-[550px]'
-//     }
-//     if(resPerPage.value === 12) {
-//         minHeight.value = 'min-h-[650px]'
-//     }
-//     fetchForecastList()
-// });
-
 watch([status, pageNumber, resPerPage], () => {
     if(resPerPage.value === 5) {
         minHeight.value = 'min-h-[300px]'
@@ -190,7 +170,7 @@ watch(() => adminSelectionStore.getSelected, () => {
                                     <p>Total:</p>
                                     <p class="text-[#2acc97]">{{ totalRes }}</p>
                                 </div>
-                                <div class="flex items-center space-x-6">
+                                <div class="flex items-center sm:space-x-6 max-sm:flex-col-reverse max-sm:gap-y-3 max-sm:items-end">
                                     <div v-if="isAdmin" class="flex items-center shadow-sm rounded-md overflow-hidden bg-white">
                                         <div @click="changeStatus('renew')" class="flex items-center p-3 cursor-pointer duration-300 ease-in-out transition-all relative overflow-hidden" :class="status === 'renew' ? 'bg-red-500 text-white w-28' : 'text-red-500 w-12'">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

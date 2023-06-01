@@ -241,7 +241,7 @@ watch(() => adminSelectionStore.getSelected, () => {
                                         </div>
 
                                         <div class="flex items-center" v-if="isAdmin">
-                                            <input @click="carTypeHandler('unregisted')" id="default-radio-2" type="radio" value="registed" v-model="carType" name="registed" class="w-4 h-4">
+                                            <input @click="carTypeHandler('unregisted')" id="default-radio-2" type="radio" value="unregisted" v-model="carType" name="unregisted" class="w-4 h-4">
                                             <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Unregisted cars</label>
                                         </div>
                                     

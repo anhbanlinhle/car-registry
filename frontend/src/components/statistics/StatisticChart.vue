@@ -242,12 +242,12 @@ watch(() => adminSelectionStore.getSelected, () => {
 
 <template>
     <div class="w-4/5 flex flex-col items-center bg-white rounded-md shadow-md p-4 gap-5">
-        <div class="w-full flex items-center justify-between pl-1">
+        <div class="w-full flex items-center justify-between pl-1 max-sm:flex-col max-sm:items-start">
             <div class="flex items-center gap-1">
                 <div class="font-medium text-[#1d1d1d]">Year:</div>
                 <div class="font-medium" :class="totalRegist > totalExpire ? 'text-[#2acc97]' : 'text-[#93a3e6]'">{{ year }}</div>
             </div>
-            <div class="flex items-center gap-6">
+            <div class="flex items-center sm:gap-6 max-sm:flex-col max-sm:items-start">
                 <div class="flex items-center gap-1">
                     <div class="font-medium text-[#1d1d1d]">Total Registed:</div>
                     <div class="font-medium text-[#2acc97]"> {{ totalRegist }} </div>
